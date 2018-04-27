@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using LesSimpleEfficacesFront.Views;
 using Xamarin.Forms;
 
 namespace LesSimpleEfficacesFront
@@ -13,8 +9,8 @@ namespace LesSimpleEfficacesFront
 		{
 			InitializeComponent();
 
-			MainPage = new LesSimpleEfficacesFront.MainPage();
-		}
+			MainPage = new NavigationPage(new MainView());
+        }
 
 		protected override void OnStart ()
 		{
