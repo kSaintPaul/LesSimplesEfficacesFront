@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LesSimpleEfficacesFront.Views.RegistrationView">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Création de compte" FontSize="20"></Label>
+
+            <Entry Placeholder="Nom" Text="{Binding LastName}" />
+            <Entry Placeholder="Prenom" Text="{Binding FirstName}" />
+            <Entry Placeholder="Mail" Text="{Binding Mail}" Keyboard="Email" />
+            <Entry Placeholder="Login" Text="{Binding Login}" />
+            <Entry Placeholder="Mot de passe" Text="{Binding Password}" IsPassword="True" />
+            <Entry Placeholder="Confirmer le mot de passe" Text="{Binding PasswordConfirm}" IsPassword="True" />
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Date of Birth" FontSize="25" VerticalOptions="End"/>
+                <DatePicker Date="{Binding DateBirthDay}"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Sauvegarder" Command="{Binding SaveCommand}"/>
+                <Button BackgroundColor="Maroon" Text="Effacer" Command="{Binding ResetCommand}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

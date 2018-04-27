@@ -121,11 +121,11 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\LesSimpleEfficacesFront\LesSimpleEfficacesFront.csproj">
-      <Project>{C1CE9792-ECB0-44A0-AF88-4142995BCFDD}</Project>
+      <Project>{c7eced76-6eda-48ef-a0dc-c95ed21f18a5}</Project>
       <Name>LesSimpleEfficacesFront</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
