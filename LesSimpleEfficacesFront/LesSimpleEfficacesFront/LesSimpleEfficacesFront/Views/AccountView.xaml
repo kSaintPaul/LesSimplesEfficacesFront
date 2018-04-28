@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LesSimpleEfficacesFront.Views.AccountView">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Mon Compte" FontSize="20"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Text="Nom" FontSize="25"/>
+                <Entry Grid.Column="1" Grid.Row="0" Placeholder="Nom" Text="{Binding LastName}" IsEnabled="{Binding IsFriendView}" />
+
+                <Label Grid.Column="0" Grid.Row="1" Text="Prenom" FontSize="25"/>
+                <Entry Grid.Column="1" Grid.Row="1" Placeholder="Prenom" Text="{Binding FirstName}" IsEnabled="{Binding IsFriendView}" />
+
+                <Label Grid.Column="0" Grid.Row="2" Text="Mail" FontSize="25"/>
+                <Entry Grid.Column="1" Grid.Row="2" Placeholder="Mail" Text="{Binding Mail}" Keyboard="Email" IsEnabled="{Binding IsFriendView}" />
+
+                <Label Grid.Column="0" Grid.Row="3" Text="Login" FontSize="25"/>
+                <Entry Grid.Column="1" Grid.Row="3" Placeholder="Login" Text="{Binding Login}" IsEnabled="{Binding IsFriendView}" />
+
+                <Label Grid.Column="0" Grid.Row="4" Text="Date de naissance" FontSize="25"/>
+                <DatePicker Grid.Column="1" Grid.Row="4" Date="{Binding DateBirthDay}" IsEnabled="{Binding IsFriendView}" />
+
+            </Grid>
+
+            <Button Text="Changer le mot de passe" Command="{Binding ChangePassword}" IsVisible="{Binding IsFriendView}" />
+
+            <StackLayout Orientation="Horizontal" IsVisible="{Binding IsFriendView}">
+                <Button Text="Sauvegarder" Command="{Binding SaveCommand}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

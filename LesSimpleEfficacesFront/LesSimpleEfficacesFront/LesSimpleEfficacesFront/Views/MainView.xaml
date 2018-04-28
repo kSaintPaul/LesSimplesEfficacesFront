@@ -4,15 +4,14 @@
              x:Class="LesSimpleEfficacesFront.Views.MainView">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Menu"
-                   HorizontalOptions="CenterAndExpand" />
+            <Label Text="Menu" HorizontalOptions="CenterAndExpand" />
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
                 <Button Grid.Row="0" Text="Parcours" BackgroundColor="#0099ff"  Command="{Binding RoutCommand}" />
