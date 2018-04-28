@@ -1,12 +1,12 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace LesSimpleEfficacesFront.Views
+namespace LesSimpleEfficacesFront.Views.Games
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class GroupsView : ContentPage
+	public partial class GameQuestionView : ContentPage
 	{
-		public GroupsView ()
+		public GameQuestionView ()
 		{
 			InitializeComponent ();
 		}

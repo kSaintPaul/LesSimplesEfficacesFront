@@ -4,9 +4,9 @@ using Xamarin.Forms.Xaml;
 namespace LesSimpleEfficacesFront.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class GroupsView : ContentPage
+	public partial class GameView : ContentPage
 	{
-		public GroupsView ()
+		public GameView ()
 		{
 			InitializeComponent ();
 		}

@@ -5,13 +5,13 @@ using Xamarin.Forms.Xaml;
 namespace LesSimpleEfficacesFront.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginView : ContentPage
+	public partial class ValidGameView : ContentPage
 	{
-		public LoginView ()
+		public ValidGameView ()
 		{
 			InitializeComponent ();
 
-		    BindingContext = new LoginViewModel(Navigation, this);
+		    BindingContext = new ValidGameViewModel(Navigation, this);
 		}
 	}
 }

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LesSimpleEfficacesFront.Views.GameView">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Mon score : " />
+                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Score}" />
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Consigne : " />
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Consigne}" />
+
+                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="LimeGreen" TextColor="White" Text="C'est partie !" Command="{Binding StartGameCommand}" />
+
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
