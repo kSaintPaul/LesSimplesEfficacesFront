@@ -3,15 +3,16 @@ using System.Collections.Generic;
 
 namespace LesSimpleEfficacesFront.Models
 {
-	public class Difficulty
+	public class Theme
 	{
-		public Difficulty()
+		public Theme()
 		{
 			Routes = new HashSet<Route>();
 		}
 
 		public Guid Id { get; set; }
 		public string Designation { get; set; }
+		public string Description { get; set; }
 
 		public virtual ICollection<Route> Routes { get; set; }
 	}

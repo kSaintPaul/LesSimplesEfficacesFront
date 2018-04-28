@@ -1,7 +1,7 @@
-﻿using LesSimpleEfficacesFront.Common;
-using LesSimpleEfficacesFront.Views;
-using System;
+﻿using System;
 using System.Windows.Input;
+using LesSimpleEfficacesFront.Common;
+using LesSimpleEfficacesFront.Views;
 using Xamarin.Forms;
 
 namespace LesSimpleEfficacesFront.ViewModels

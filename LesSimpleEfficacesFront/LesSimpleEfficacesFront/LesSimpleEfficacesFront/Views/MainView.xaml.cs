@@ -9,9 +9,9 @@ namespace LesSimpleEfficacesFront.Views
 	{
 		public MainView ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 
-		    BindingContext = new MainViewModel();
+		    BindingContext = new MainViewModel(Navigation);
 		}
 	}
 }
