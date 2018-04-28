@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LesSimpleEfficacesFront.Views.Games.GameQuizzView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Question}" />
+
+                <Button Grid.Row="0" Grid.Column="0" Text="{Binding FirstResponseText}" Command="{Binding FirstResponseCommand}" />
+                <Button Grid.Row="1" Grid.Column="0" Text="{Binding SecondResponseText}" Command="{Binding SecondResponseCommand}" />
+                <Button Grid.Row="0" Grid.Column="1" Text="{Binding ThreeResponseText}" Command="{Binding ThreeResponseCommand}" />
+                <Button Grid.Row="1" Grid.Column="1" Text="{Binding FourResponseText}" Command="{Binding FourResponseCommand}" />
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
