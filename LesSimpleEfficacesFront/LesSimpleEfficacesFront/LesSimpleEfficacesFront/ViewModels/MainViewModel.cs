@@ -1,5 +1,6 @@
 ﻿using System.Windows.Input;
 using LesSimpleEfficacesFront.Common;
+using LesSimpleEfficacesFront.Views;
 using Xamarin.Forms;
 
 namespace LesSimpleEfficacesFront.ViewModels
@@ -121,11 +122,31 @@ namespace LesSimpleEfficacesFront.ViewModels
 
         private void DoAccountCommand(object param)
         {
-
+            _navigation.PushAsync(new AccountView());
         }
 
         #endregion
-        
+
+        #region Normal ICommand => AccountCommand
+
+        private ICommand _startCommand;
+
+        public ICommand StartCommand
+        {
+            get
+            {
+                _startCommand = _startCommand ?? new RelayCommand(DoStartCommand);
+                return _startCommand;
+            }
+        }
+
+        private void DoStartCommand(object param)
+        {
+            _navigation.PushAsync(new ThemesView());
+        }
+
+        #endregion
+
         #endregion
 
     }
