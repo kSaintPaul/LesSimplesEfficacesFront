@@ -10,14 +10,16 @@ namespace LesSimpleEfficacesFront.ViewModels
         #region Private Properties
         
         private readonly INavigation _navigation;
+        private Page _page;
 
         #endregion
 
         #region CTOR
 
-        public LoginViewModel(INavigation navigation)
+        public LoginViewModel(INavigation navigation, Page page)
         {
             _navigation = navigation;
+            _page = page;
         }
 
         #endregion
@@ -61,8 +63,7 @@ namespace LesSimpleEfficacesFront.ViewModels
         #endregion
 
         #region Command
-
-
+        
         #region Normal ICommand => LoginCommand
 
         private ICommand _loginCommand;
@@ -76,14 +77,25 @@ namespace LesSimpleEfficacesFront.ViewModels
             }
         }
 
-        private void DoLoginCommand(object param)
+        private async void DoLoginCommand(object param)
         {
+            if (string.IsNullOrWhiteSpace(Login))
+            {
+                await _page.DisplayAlert("Erreur", "Le login est obligatoire", "Ok");
+                return;
+            }
 
+            if (string.IsNullOrWhiteSpace(Password))
+            {
+                await _page.DisplayAlert("Erreur", "Le Mot de passe est obligatoire", "Ok");
+                return;
+            }
+
+            await _navigation.PushAsync(new MainView());
         }
 
         #endregion
-
-
+        
         #region Normal ICommand => RegisterCommand
 
         private ICommand _registerCommand;

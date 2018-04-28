@@ -8,7 +8,7 @@ namespace LesSimpleEfficacesFront.ViewModels
     public class MainViewModel : BaseViewModel
     {
 
-        private INavigation _navigation;
+        private readonly INavigation _navigation;
 
         #region CTOR
 
@@ -42,7 +42,7 @@ namespace LesSimpleEfficacesFront.ViewModels
 
         private void DoRoutCommand(object param)
         {
-
+            _navigation.PushAsync(new GameView());
         }
 
         #endregion

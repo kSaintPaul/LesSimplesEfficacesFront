@@ -7,11 +7,11 @@
             <Label Text="Connexion" FontSize="20" />
 
             <Entry Placeholder="Login" Text="{Binding Login}" />
-            <Entry Placeholder="Mot De Passe" Text="{Binding Password}" />
+            <Entry Placeholder="Mot De Passe" Text="{Binding Password}" IsPassword="True" />
 
             <StackLayout Orientation="Horizontal">
-                <Button Text="Connexion" Command="{Binding ConnectionCommand}"/>
-                <Button Text="Inscription" Command="{Binding RegisterCommand}"/>
+                <Button Text="Connexion" Command="{Binding LoginCommand}"/>
+                <Button Text="Inscription" Command="{Binding RegisterCommand}" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
