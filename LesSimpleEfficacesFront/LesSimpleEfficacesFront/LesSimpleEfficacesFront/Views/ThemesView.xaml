@@ -1,12 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LesSimpleEfficacesFront.Views.ThemesView">
+             x:Class="LesSimpleEfficacesFront.Views.ThemesView"
+             Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid BackgroundColor="#D8E5F1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="2" Grid.RowSpan="5">
+
+
+                <ListView x:Name="ThemesList"
+				    ItemsSource="{Binding Themes}"
+                    VerticalOptions="CenterAndExpand"
+                      HorizontalOptions="CenterAndExpand"
+                    SeparatorColor="Black" BackgroundColor="#4098e5">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical" >
+                                    <Label FontAttributes="Bold"  Text="{Binding Designation}"
+                                               TextColor="White"
+                                               LineBreakMode="NoWrap"
+                                               FontSize="19" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ThemeTappedCommand}" />
+                    </ListView.GestureRecognizers>
+                </ListView>
+
+
+
+                <!--<ListView x:Name="ThemesList"
+				    ItemsSource="{Binding Themes}"
+                    VerticalOptions="FillAndExpand"
+                    SeparatorColor="White">
+                    
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="10" Orientation="Vertical" BackgroundColor="#4098e5">
+                                    <Label Text="{Binding Designation}"
+                                               TextColor="White"
+                                               LineBreakMode="NoWrap"
+                                               FontSize="19"
+                                               HorizontalOptions="Center" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ThemeTappedCommand}" />
+                    </ListView.GestureRecognizers>
+                </ListView>-->
+                
+                <Button Text="Suivant" Command="{Binding GoToRoutesCommand}"></Button>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

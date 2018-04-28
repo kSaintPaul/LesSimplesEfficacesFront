@@ -1,12 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LesSimpleEfficacesFront.Views.RouteView">
+             x:Class="LesSimpleEfficacesFront.Views.RouteView"
+             Title="Parcours">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <ListView x:Name="RoutesList"
+				    ItemsSource="{Binding Routes}"
+                    VerticalOptions="CenterAndExpand"
+                      HorizontalOptions="CenterAndExpand"
+                    SeparatorColor="Black" BackgroundColor="LightGray"> 
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" >
+                                <Label FontAttributes="Bold"  Text="{Binding Designation}"
+                                               TextColor="#894de2"
+                                               LineBreakMode="NoWrap"
+                                               FontSize="19" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ThemeTappedCommand}" />
+                </ListView.GestureRecognizers>
+            </ListView>
+
+            <Button Text="Suivant" Command="{Binding GoToRoutesCommand}"></Button>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,5 +1,4 @@
-﻿using LesSimpleEfficacesFront.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,13 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace LesSimpleEfficacesFront.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ThemesView : ContentPage
+	public partial class DetailsRouteView : ContentPage
 	{
-		public ThemesView ()
+		public DetailsRouteView ()
 		{
 			InitializeComponent ();
-
-            BindingContext = new ThemeViewModel(Navigation);
-        }
+		}
 	}
 }

@@ -14,9 +14,9 @@ namespace LesSimpleEfficacesFront.Models
 
 		public Guid Id { get; set; }
 		public string Designation { get; set; }
-		public DateTime? StartingDate { get; set; }
-		public DateTime? Duration { get; set; }
-		public int? ParticipantsCount { get; set; }
+		public string StartingDate { get; set; }
+		public string Duration { get; set; }
+		public string ParticipantsCount { get; set; }
 		public string Description { get; set; }
 		public Guid? DifficultyId { get; set; }
 

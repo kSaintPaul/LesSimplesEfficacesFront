@@ -14,7 +14,7 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Button Grid.Row="0" Text="Commencer" BackgroundColor="#0099ff"  Command="{Binding RoutCommand}" />
+                <Button Grid.Row="0" Text="Commencer" BackgroundColor="#0099ff"  Command="{Binding StartCommand}" />
                 <Button Grid.Row="1" Text="Mes amis" BackgroundColor="#33cc33" Command="{Binding FriendCommand}" />
                 <Button Grid.Row="2" Text="Mon groupe" BackgroundColor="#00cc99" Command="{Binding GroupCommand}" />
                 <Button Grid.Row="3" Text="Mes statistiques" BackgroundColor="#ff9900" Command="{Binding StatCommand}" />

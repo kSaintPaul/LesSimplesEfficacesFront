@@ -127,7 +127,7 @@ namespace LesSimpleEfficacesFront.ViewModels
 
         #endregion
 
-        #region Normal ICommand => AccountCommand
+        #region Normal ICommand => StartCommand
 
         private ICommand _startCommand;
 
