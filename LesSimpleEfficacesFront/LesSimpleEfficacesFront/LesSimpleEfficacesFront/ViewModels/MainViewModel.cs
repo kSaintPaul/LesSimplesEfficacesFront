@@ -11,8 +11,7 @@ namespace LesSimpleEfficacesFront.ViewModels
         }
 
         #region Propriete
-
-
+        
         #region Normal Raised Prop => Hello
 
         private string _hello;
@@ -28,13 +27,11 @@ namespace LesSimpleEfficacesFront.ViewModels
         }
 
         #endregion
-
-
+        
         #endregion
 
         #region Command
-
-
+        
         #region Normal ICommand => ButtonCommand    
 
         private ICommand _buttonCommand;
@@ -54,8 +51,7 @@ namespace LesSimpleEfficacesFront.ViewModels
         }
 
         #endregion
-
-
+        
         #endregion
 
     }

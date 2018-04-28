@@ -1,7 +1,7 @@
-﻿using System;
-using System.Windows.Input;
-using LesSimpleEfficacesFront.Common;
+﻿using LesSimpleEfficacesFront.Common;
 using LesSimpleEfficacesFront.Views;
+using System;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace LesSimpleEfficacesFront.ViewModels
@@ -27,8 +27,7 @@ namespace LesSimpleEfficacesFront.ViewModels
         #endregion
         
         #region Properties
-
-
+        
         #region Normal Raised Prop => LastName
 
         private string _lastName;
@@ -44,8 +43,7 @@ namespace LesSimpleEfficacesFront.ViewModels
         }
 
         #endregion
-
-
+        
         #region Normal Raised Prop => FirstName
 
         private string _firstName;
@@ -61,8 +59,7 @@ namespace LesSimpleEfficacesFront.ViewModels
         }
 
         #endregion
-
-
+        
         #region Normal Raised Prop => Mail
 
         private string _mail;
@@ -78,8 +75,7 @@ namespace LesSimpleEfficacesFront.ViewModels
         }
 
         #endregion
-
-
+        
         #region Normal Raised Prop => Login
 
         private string _login;
@@ -95,8 +91,7 @@ namespace LesSimpleEfficacesFront.ViewModels
         }
 
         #endregion
-
-
+        
         #region Normal Raised Prop => Password
 
         private string _password;
@@ -112,8 +107,7 @@ namespace LesSimpleEfficacesFront.ViewModels
         }
 
         #endregion
-
-
+        
         #region Normal Raised Prop => PasswordConfirm
 
         private string _passwordConfirm;
@@ -129,8 +123,7 @@ namespace LesSimpleEfficacesFront.ViewModels
         }
 
         #endregion
-
-
+        
         #region Normal Raised Prop => DateBirthDay
 
         private DateTime _dateBirthDay;
@@ -146,13 +139,11 @@ namespace LesSimpleEfficacesFront.ViewModels
         }
 
         #endregion
-
-
+        
         #endregion
 
         #region Command
-
-
+        
         #region Normal ICommand => SaveCommand
 
         private ICommand _saveCommand;
@@ -178,8 +169,7 @@ namespace LesSimpleEfficacesFront.ViewModels
         }
 
         #endregion
-
-
+        
         #region Normal ICommand => ResetCommand
 
         private ICommand _resetCommand;
